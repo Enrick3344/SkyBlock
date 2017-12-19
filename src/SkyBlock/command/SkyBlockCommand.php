@@ -26,7 +26,7 @@ class SkyBlockCommand extends Command {
      */
     public function __construct(SkyBlock $plugin) {
         $this->plugin = $plugin;
-        parent::__construct("skyblock", "Main SkyBlock command", "Usage: /skyblock", ["sb"]);
+        parent::__construct("island", "Main SkyBlock command", "Usage: /island", ["is"]);
     }
 
     public function sendMessage(Player $sender, $message) {
@@ -258,7 +258,7 @@ class SkyBlockCommand extends Command {
                             }
                         }
                         else {
-                            $this->sendMessage($sender, "Usage: /skyblock accept <sender name>");
+                            $this->sendMessage($sender, "Usage: /island accept <sender name>");
                         }
                         break;
                     case "deny":
@@ -290,7 +290,7 @@ class SkyBlockCommand extends Command {
                             }
                         }
                         else {
-                            $this->sendMessage($sender, "Usage: /skyblock accept <sender name>");
+                            $this->sendMessage($sender, "Usage: /island accept <sender name>");
                         }
                         break;
                     case "members":
@@ -369,7 +369,7 @@ class SkyBlockCommand extends Command {
                                         }
                                     }
                                     else {
-                                        $this->sendMessage($sender, "Usage: /skyblock makeleader <player>");
+                                        $this->sendMessage($sender, "Usage: /island makeleader <player>");
                                     }
                                 }
                                 else {
@@ -428,7 +428,7 @@ class SkyBlockCommand extends Command {
                                         }
                                     }
                                     else {
-                                        $this->sendMessage($sender, "Usage: /skyblock remove <player>");
+                                        $this->sendMessage($sender, "Usage: /island remove <player>");
                                     }
                                 }
                                 else {
@@ -457,7 +457,7 @@ class SkyBlockCommand extends Command {
                             }
                         }
                         else {
-                            $this->sendMessage($sender, "Usage: /skyblock tp <owner name>");
+                            $this->sendMessage($sender, "Usage: /island tp <owner name>");
                         }
                         break;
                     case "reset":
@@ -515,7 +515,7 @@ class SkyBlockCommand extends Command {
                             "teamchat" => "Change your chat to your island chat"
                         ];
                         foreach($commands as $command => $description) {
-                            $sender->sendMessage(TextFormat::RED . "/skyblock {$command}: " . TextFormat::YELLOW . $description);
+                            $sender->sendMessage(TextFormat::RED . "/island {$command}: " . TextFormat::YELLOW . $description);
                         }
                         break;
                     case "teamchat":
@@ -541,12 +541,12 @@ class SkyBlockCommand extends Command {
                         }
                         break;
                     default:
-                        $this->sendMessage($sender, "Use /skyblock info if you don't know how to use the command!");
+                        $this->sendMessage($sender, "Use /island info if you don't know how to use the command!");
                         break;
                 }
             }
             else {
-                $this->sendMessage($sender, "Use /skyblock info if you don't know how to use the command!");
+                $this->sendMessage($sender, "Use /island info if you don't know how to use the command!");
             }
         }
         else {
