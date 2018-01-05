@@ -515,7 +515,7 @@ class SkyBlockCommand extends Command {
                             "teamchat" => "Change your chat to your island chat"
                         ];
                         foreach($commands as $command => $description) {
-                            $sender->sendMessage(TextFormat::PURPLE . "/island {$command}: " . TextFormat::AQUA . $description);
+                            $sender->sendMessage(TextFormat::LIGHT_PURPLE . "/island {$command}: " . TextFormat::AQUA . $description);
                         }
                         break;
                     case "teamchat":
